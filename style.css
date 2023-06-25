@@ -9,6 +9,18 @@ a{
     text-decoration: none;
 }
 
+/* Buttons style */
+
+.btn{
+    padding: 10px;
+    border: none;
+    border-radius: 12px;
+    text-align: center;
+    background-color:rgba(255, 255, 255, 0.2);
+}
+
+/*avatar style */
+
 .avatar{
     width: 80px;
     overflow: hidden;
@@ -20,11 +32,13 @@ a{
     border: 5px solid orange;
 }
 
+/* grid layout */
+
 .grid-container{
     height: 100vh;
     width: 100vw;
     display:grid;
-    grid-template-columns: 270px 1fr 400px;
+    grid-template-columns: 270px 1fr 350px;
     grid-template-rows:  150px 1fr;
 }
 
@@ -47,26 +61,36 @@ a{
 .main{
     text-align: center;
     text-transform: uppercase;
-    padding: 20px;
+    padding: 30px;
 }
 
 .news{
     grid-area: 2/3/3/4;
-    background-color: yellow;
 }
+
+/* styling header */
 
 .header .header-div1{
     display: flex;
     flex-direction: column;
     justify-content:space-between;
     flex: 1;
-    margin-right: 50px;
+    border:2px solid red;
 }
 
 .header .header-div1 .search{
-    width: 100%;
-    border: 2px solid red;
+    
 }
+
+.header .header-div1 .search input{
+    
+}
+
+.header .header-div1 .avatar{
+   display: flex;
+}
+
+/*styling sidebar */
 
 .sidebar .sidebar-dashboard{
     height: 200px;
@@ -92,16 +116,19 @@ a{
     cursor: pointer;
 }
 
+/*styling main section */
+
 .projects-container{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    grid-gap:20px;
-    margin-top:10px;
+    grid-template-columns: repeat(auto-fit,minmax(390px,1fr));
+    row-gap:40px;
+    column-gap: 30px;
+    margin-top:20px;
 }
 
 .projects-container .project{
-    height: 350px;
+    height: 450px;
     border-radius: 4px;
     padding-bottom:10px;
     background-color: gray;
