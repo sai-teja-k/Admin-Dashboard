@@ -4,8 +4,25 @@
     box-sizing: border-box;
 }
 
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.avatar{
+    width: 80px;
+    overflow: hidden;
+}
+
+.avatar img{
+    width: 100%;
+    border-radius: 50%;
+    border: 5px solid orange;
+}
+
 .grid-container{
     height: 100vh;
+    width: 100vw;
     display:grid;
     grid-template-columns: 270px 1fr 400px;
     grid-template-rows:  150px 1fr;
@@ -13,19 +30,100 @@
 
 .sidebar{
     grid-area: 1/1/3/2;
-    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    background-color: #394263;
 }
 
+
 .header{
+    display: flex;
+    justify-content:space-between;
     grid-area: 1/2/2/4;
+    padding: 10px 20px 10px 20px;
     background-color:cornflowerblue;
 }
 
 .main{
-    background-color: bisque;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px;
 }
 
 .news{
     grid-area: 2/3/3/4;
     background-color: yellow;
+}
+
+.header .header-div1{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    flex: 1;
+    margin-right: 50px;
+}
+
+.header .header-div1 .search{
+    width: 100%;
+    border: 2px solid red;
+}
+
+.sidebar .sidebar-dashboard{
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-list{
+    padding: 0;
+    margin-top: 20px;
+    list-style-type: none;
+}
+
+.sidebar-list-item{
+    padding: 20px;
+    color:#ddd;
+}
+
+.sidebar-list-item:hover{
+    background-color:rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.projects-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap:20px;
+    margin-top:10px;
+}
+
+.projects-container .project{
+    height: 350px;
+    border-radius: 4px;
+    padding-bottom:10px;
+    background-color: gray;
+}
+
+.projects-container .project .project-image{
+    width: 100%;
+    height: 90%;
+}
+
+.projects-container .project .project-title{
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 0px;
+    transition: all 0.3s ease-out;
+}
+
+.projects-container .project .code{
+    color: gray;
+}
+
+.projects-container .project:hover .code{
+    color: orange;
 }
