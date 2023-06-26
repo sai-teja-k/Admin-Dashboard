@@ -15,6 +15,7 @@ a{
     padding: 10px;
     border: none;
     border-radius: 12px;
+    margin-right: 10px;
     text-align: center;
     background-color:rgba(255, 255, 255, 0.2);
 }
@@ -37,8 +38,9 @@ a{
 .grid-container{
     height: 100vh;
     width: 100vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     display:grid;
-    grid-template-columns: 270px 1fr 350px;
+    grid-template-columns: 270px 1fr 400px;
     grid-template-rows:  150px 1fr;
 }
 
@@ -62,10 +64,16 @@ a{
     text-align: center;
     text-transform: uppercase;
     padding: 30px;
+    background-color: antiquewhite;
 }
 
 .news{
     grid-area: 2/3/3/4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:20px 30px 20px 0;
+    background-color: antiquewhite;
 }
 
 /* styling header */
@@ -74,8 +82,15 @@ a{
     display: flex;
     flex-direction: column;
     justify-content:space-between;
-    flex: 1;
+    flex: 1;    
     border:2px solid red;
+}
+
+.header .header-div2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid red;
 }
 
 .header .header-div1 .search{
@@ -87,7 +102,6 @@ a{
 }
 
 .header .header-div1 .avatar{
-   display: flex;
 }
 
 /*styling sidebar */
@@ -100,6 +114,10 @@ a{
     background-color:rgba(255, 255, 255, 0.2);
 }
 
+.sidebar .sidebar-dashboard .avatar{
+    width: 100px;
+}
+
 .sidebar-list{
     padding: 0;
     margin-top: 20px;
@@ -108,6 +126,7 @@ a{
 
 .sidebar-list-item{
     padding: 20px;
+    margin: 10px;
     color:#ddd;
 }
 
@@ -121,17 +140,20 @@ a{
 .projects-container{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(390px,1fr));
-    row-gap:40px;
-    column-gap: 30px;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap:40px;
     margin-top:20px;
+    padding:40px;
 }
 
 .projects-container .project{
-    height: 450px;
+    height: 350px;
     border-radius: 4px;
     padding-bottom:10px;
     background-color: gray;
+    -webkit-box-shadow: -14px 11px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -14px 11px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: -14px 11px 5px 0px rgba(0,0,0,0.75);
 }
 
 .projects-container .project .project-image{
@@ -153,4 +175,23 @@ a{
 
 .projects-container .project:hover .code{
     color: orange;
+}
+
+/* styling news section */
+
+.news .news-content{
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.news .news-content .content{
+    border-radius: 10px;
+    margin-top: 15px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.news-content .content .item,.news-content .content .item h3{
+    margin: 10px 0px;
 }
