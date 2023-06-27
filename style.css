@@ -24,7 +24,6 @@ a{
 }
 
 .btn:hover{
-    border-color:orange;
     background-color: white;
 
 }
@@ -44,7 +43,7 @@ a{
 }
 
 .avatar img:hover{
-    border:5px solid #394263;
+    border:5px solid black;
 }
 
 /* grid layout */
@@ -73,7 +72,7 @@ a{
     border-radius: 25px;
     display: grid;
     grid-template-columns: 1fr 450px;
-    background-color:cornflowerblue;
+    background-color:#4bc3e7;
 }
 
 .main{
