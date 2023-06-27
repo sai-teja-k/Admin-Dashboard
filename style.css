@@ -226,12 +226,17 @@ input:focus{
 }
 
 .projects-container .project .project-title{
-    display: block;
     font-size: 15px;
     font-weight: 600;
-    padding: 10px 0px;
+    padding: 10px 10px;
     transition: all 0.5s ease-in-out;
 }
+
+.projects-container .project .git-view{
+    float: right;
+    margin: 0 10px;
+}
+
 
 .projects-container .project .code{
     color: var(--dark-grey);
@@ -240,6 +245,7 @@ input:focus{
 .projects-container .project:hover .code{
     color: var(--orange);
 }
+
 
 /* styling news section */
 
