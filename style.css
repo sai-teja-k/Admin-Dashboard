@@ -42,7 +42,6 @@ a{
 
 .avatar{
     width: 80px;
-    cursor: pointer;
     overflow: hidden;
 }
 
@@ -50,10 +49,22 @@ a{
     width: 100%;
     border-radius: 50%;
     border: 5px solid var(--orange);
+    transition: all 0.3s ease-out;
 }
 
 .avatar img:hover{
     border:5px solid var(--dark-grey);
+}
+
+/* stylimg icons */
+
+.fa{
+    transition: all 0.5s ease-out;
+}
+
+.fa:hover{
+    color:var(--orange);
+    transform: rotate(360deg);
 }
 
 /* grid layout */
@@ -192,7 +203,11 @@ input:focus{
 
 .sidebar-list-item:hover{
     background-color:var(--light-grey);
-    cursor: pointer;
+}
+
+.sidebar-list-item:hover .fa{
+    color:var(--orange);
+    transform: rotate(360deg);
 }
 
 /*styling main section */
@@ -203,6 +218,7 @@ input:focus{
 
 .projects-container{
     width: 100%;
+    color: var(--white);
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     grid-gap:40px;
@@ -211,13 +227,16 @@ input:focus{
 
 .projects-container .project{
     height: 350px;
-    border-radius: 5px;
+    border-radius: 8px;
     padding-bottom:10px;
     overflow: hidden;
     background-color: var(--dark-grey);
-    -webkit-box-shadow: -14px 11px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: -14px 11px 5px 0px rgba(0,0,0,0.75);
     box-shadow: -14px 11px 5px 0px rgba(0,0,0,0.75);
+    transition: all 0.5s ease-out;
+}
+
+.projects-container .project:hover{
+    box-shadow: 14px 11px 5px 0px rgba(0,0,0,0.75);
 }
 
 .projects-container .project .project-image{
@@ -229,7 +248,6 @@ input:focus{
     font-size: 15px;
     font-weight: 600;
     padding: 10px 10px;
-    transition: all 0.5s ease-in-out;
 }
 
 .projects-container .project .git-view{
@@ -237,9 +255,9 @@ input:focus{
     margin: 0 10px;
 }
 
-
 .projects-container .project .code{
     color: var(--dark-grey);
+    transition: all 0.5s ease-out;
 }
 
 .projects-container .project:hover .code{
